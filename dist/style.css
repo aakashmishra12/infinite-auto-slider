@@ -1,0 +1,243 @@
+body {
+    align-items: center;
+    background: #0d0d0d;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0%;
+    padding: 0%;
+}
+
+.slider-head-title {
+    text-align: center;
+    color: #ffffff;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 58px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ffffff;
+    margin-bottom: 38px;
+}
+
+.image-slider-sec {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.orange-color {
+    color: #e1a64c;
+}
+
+hr {
+    border: none;
+    color: #000000;
+    background-color: #000000;
+    height: 1px;
+}
+
+.hr-sect-2 {
+    opacity: 0.7;
+    border-bottom: 4px solid #ffffff;
+    width: 45px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 0px;
+}
+
+.slider-sec-lower-menu {
+    margin: 70px 120px 60px 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sect-2-header {
+    font-family: Manrope-Regular;
+    font-family: "Manrope";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #ffffff;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+}
+
+#rooms {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 58px;
+    /* identical to box height, or 161% */
+    text-transform: capitalize;
+    color: #ffffff;
+    margin-top: 16px;
+}
+
+.slider-btn {
+    width: 75px;
+    height: 75px;
+    left: 1171px;
+    top: 3073px;
+    background: #0d0d0d;
+    opacity: 0.7;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-align: center;
+    font-size: 31px;
+    margin-right: 20px;
+}
+
+.slider-btn:hover {
+    background: #000000;
+    border: 1px solid #e1a64c;
+    color: #e1a64c;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-btns {
+    display: flex;
+}
+
+
+/* living room css */
+
+.slider {
+    overflow: hidden;
+    /* width: 750px; */
+    /* width: 1500px; */
+    width: 100%;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(914 * 4);
+    animation: scroll 16s linear infinite;
+}
+
+.slide {
+    width: 864px;
+    height: 470px;
+    /* line-height: 100px; */
+    /* outline: 4px solid; */
+    margin-right: 50px;
+    /* text-align: center; */
+}
+
+.slide img {
+    width: 864px;
+    height: 470px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1828px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* rooms css  */
+    .slide-track {
+        display: flex;
+        width: calc(273 * 4);
+        animation: scroll 16s linear infinite;
+    }
+    .slide {
+        width: 253px;
+        height: 228px;
+        /* line-height: 100px; */
+        /* outline: 4px solid; */
+        margin-right: 20px;
+        /* text-align: center; */
+    }
+    .slide img {
+        width: 253px;
+        height: 228px;
+    }
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-546px);
+        }
+    }
+    .slider-head-title {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 38px;
+        /* identical to box height, or 152% */
+        text-align: center;
+        text-transform: capitalize;
+        color: #ffffff;
+    }
+    /* rooms css  */
+}
+
+
+/* living room css */
+
+@media screen and (max-width: 600px) {
+    .slider-sec-lower-menu {
+        margin: 36px 24px 50px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #rooms {
+        margin-top: 14px;
+        font-size: 25px;
+        line-height: 38px;
+    }
+    .slider-btns {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 38px;
+    }
+    .slider-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 23px;
+        border: 1px solid #ffffff;
+    }
+    .sect-2-header {
+        font-size: 16px;
+    }
+}
+
+
+/* switching between different room slides  */
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}

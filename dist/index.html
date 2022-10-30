@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>CodePen - infinite auto slider</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/6df0251b91.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <section class="image-slider-sec">
+        <div class="slider-head-title">We create <span class="orange-color">living</span> spaces</div>
+        <!-- partial:index.partial.html -->
+        <div class="slideshow-container">
+            <!-- different rooms start here  -->
+            <div class="mySlides fade">
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="livingroom-1.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="livingroom-2.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="livingroom-1.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="livingroom-2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="bedroom-1.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="bedroom-2.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="bedroom-1.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="bedroom-2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-sec-lower-menu">
+            <div>
+                <div class="sect-2-header">
+                    <hr class="hr-sect-2">our designs
+                </div>
+                <div id="rooms">Living rooms</div>
+            </div>
+            <div class="slider-btns">
+                <div onclick="plusSlides(-1)" class="slider-btn center"><i class="fa-solid fa-arrow-left"></i></div>
+                <div onclick="plusSlides(1)" class="slider-btn center"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+        </div>
+        <!-- partial -->
+    </section>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            const cars = ["Living rooms", "BedRoom"];
+            let named = document.getElementById("rooms");
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            named.innerHTML = cars[slideIndex - 1];
+            // dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>

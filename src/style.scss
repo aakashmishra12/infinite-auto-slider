@@ -1,0 +1,33 @@
+body {
+	align-items: center;
+	background: #E3E3E3;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+  * {
+    outline: 1px solid;
+  }
+}
+
+.slider {
+	overflow: hidden;
+	width: 750px;
+}
+
+.slide-track {
+	display: flex;
+	width: calc(250px * 6);
+	animation: scroll 8s linear infinite;
+}
+
+.slide {
+	width: 250px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-250px * 3); }
+}
